@@ -39,6 +39,3 @@ plot_ly()  %>%
                      paste0('количество претендентов', "\n&nbsp;", "\n&nbsp;")),
          xaxis = list(zeroline = FALSE, showgrid = FALSE, title = "Кредитный рейтинг")
   ) %>% hide_legend()
-
-threshold=50
-
