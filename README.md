@@ -11,19 +11,19 @@ function **demos** create dataframe with two subpopulations - "northern" and "so
 
 Variables = by default
 
-N0 = 500 - численность северных
+N0 = 500 - population of Northern
 
-N1 = 500 - численность южных
+N1 = 500 - population of Southern
 
-B0 = 0.2 - доля плохих заемщиков северных
+B0 = 0.2 - proportion of bad borrowers Northern
 
-B1 = 0.7 - доля плохих заемщиков южных
+B1 = 0.7 - proportion of bad borrowers Southern
 
-m0g = 70 - средний рейтинг хороших северных
+m0g = 70 - average rating of good Northern 
 
-d0g = 10 - стандартное отклонение хороших северных
+d0g = 10 - standard deviation of good Northern
 
-m0b = 50 - среднее плохих северных
+m0b = 50 - average rating of bad Northern
 
 d0b = 10 - стандартное отклонение плохих северных
 
