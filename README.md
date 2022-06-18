@@ -37,7 +37,7 @@ d1b = 10 - standard deviation of bad Southern
 
 ## Economics
 
-profit - прибыль от правильной выдачи кредита
+profit - profit from the correct issuance of a loan
 
-loss - убыток от неправильной выдачи кредита
+loss - loss from improper loan disbursement
 
