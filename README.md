@@ -25,15 +25,15 @@ d0g = 10 - standard deviation of good Northern
 
 m0b = 50 - average rating of bad Northern
 
-d0b = 10 - стандартное отклонение плохих северных
+d0b = 10 - standard deviation of bad Northern
 
-m1g = 70 - среднее хороших южных
+m1g = 70 - average rating of good Southern
 
-d1g = 10 - стандартное отклонение хороших южных
+d1g = 10 - standard deviation of good Southern
 
-m1b = 50 - среднее плохих южных
+m1b = 50 - average rating of bad Southern
 
-d1b = 10 - стандартное отклонение плохих южных
+d1b = 10 - standard deviation of bad Southern
 
 ## Economics
 
