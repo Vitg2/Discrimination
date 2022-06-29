@@ -9,7 +9,7 @@ R
 
 function **demos** create dataframe with two subpopulations - "northern" and "southern". 
 
-Variables = by default
+Аргументы = by default
 
 N0 = 500 - population of Northern
 
@@ -37,7 +37,27 @@ d1b = 10 - standard deviation of bad Southern
 
 ## Economics
 
+Функция **threshold_1** рассчитывает оптимальный порог для заданного населения.
+
+Аргументы:
+
+demos - датафрейм с населением 
+
 profit - profit from the correct issuance of a loan
 
 loss - loss from improper loan disbursement
+
+Функция **profit_base** рассчитывает прибыль, деленную на размер населения. Аргументы те же.
+
+Функция **recip** рассчитывает долю тех, кто получает заем. Аргументы:
+
+demos - датафрейм с населением 
+
+
+
+Функция my_df 
+
+Функция profit_base рассчитывает 
+
+threshold - порог одобрения 
 
