@@ -53,11 +53,45 @@ loss - loss from improper loan disbursement
 
 demos - датафрейм с населением 
 
+threshold - порог одобрения займа
 
+Функция **paritet** рассчитывает долю получивших заем для сценария демографического паритета. Для обеих групп доля должна быть одинаковая.
 
-Функция my_df 
+Аргументы: demos1, demos2, i, profit=3, loss=7. Два датафрейма с населениеми прибыль с убытками.
 
-Функция profit_base рассчитывает 
+Функция **profit_paritet** - общая прибыль сценария паритета. Аргументы те же. 
 
-threshold - порог одобрения 
+Функция **my_df** - создает датафрейм со статистиками для населения (аргумент - demos). Список статистик:
+
+Optimal_threshold_N = оптимальный порог для северных
+
+Optimal_threshold_S = оптимальный порог для южных
+
+Optimal_prop_N_yes = доля северных с положительным решением в сценарии без ограничений
+
+Optimal_prop_S_yes = доля южных с положительным решением в сценарии без ограничений
+
+Optimal_prop_yes = доля получивших заём 1-й сценарий
+
+Optimal_Profit = прибыль банка в сценарии без ограничений
+
+Just_threshold = порог в сценарии "популяционной слепоты" (2 сценарий)
+
+Just_prop_N_yes = доля северных получивших заём во 2-м сценарии
+
+Just_prop_S_yes = доля южных получивших заём во 2-м сценарии
+
+Just_prop_yes = доля получивших заём 2-й сценарий
+
+Just_Profit = profit_base(demos = demos, threshold = threshold_1(demos)),
+                     Paritet_threshold_N = quantile(dem1$credit_rate, pr/100),
+                     Paritet_threshold_S = quantile(dem2$credit_rate, pr/100),
+                     Paritet_prop_yes=(100-paritet(dem1, dem2))/100,
+                     Paritet_profit=profit_paritet(dem1, dem2),
+                     Justice_price=profit_base(dem1, threshold = threshold_1(dem1))+
+                       profit_base(dem2, threshold = threshold_1(dem2))-
+                       profit_base(demos = demos, threshold = threshold_1(demos)),
+                     Paritet_price=profit_base(dem1, threshold = threshold_1(dem1))+
+                       profit_base(dem2, threshold = threshold_1(dem2))-profit_paritet(dem1, dem2)
+
 
