@@ -7,7 +7,7 @@ R
 
 ## Demography
 
-function **demos** create dataframe with two subpopulations - "northern" and "southern". 
+Function **demos** create dataframe with two subpopulations - "northern" and "southern". 
 
 Аргументы = by default
 
