@@ -37,11 +37,11 @@ d1b = 10 - standard deviation of bad Southern
 
 ## Economics
 
-Функция **threshold_1** рассчитывает оптимальный порог для заданного населения.
+Fuction **threshold_1** evaluate optimal threshold for population.
 
 Аргументы:
 
-demos - датафрейм с населением 
+demos - population data frame 
 
 profit - profit from the correct issuance of a loan
 
