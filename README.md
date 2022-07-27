@@ -11,69 +11,71 @@ Function **demos** create dataframe with two subpopulations - "northern" and "so
 
 Аргументы = by default
 
-N0 = 500 - population of Northern
+N0 = 500 - population of Northerners
 
-N1 = 500 - population of Southern
+N1 = 500 - population of Southerners
 
-B0 = 0.2 - proportion of bad borrowers Northern
+B0 = 0.2 - proportion of bad borrowers Northerners
 
-B1 = 0.7 - proportion of bad borrowers Southern
+B1 = 0.7 - proportion of bad borrowers Southerners
 
-m0g = 70 - average rating of good Northern 
+m0g = 70 - average rating of good Northerners 
 
-d0g = 10 - standard deviation of good Northern
+d0g = 10 - standard deviation of good Northerners
 
-m0b = 50 - average rating of bad Northern
+m0b = 50 - average rating of bad Northerners
 
-d0b = 10 - standard deviation of bad Northern
+d0b = 10 - standard deviation of bad Northerners
 
-m1g = 70 - average rating of good Southern
+m1g = 70 - average rating of good Southerners
 
-d1g = 10 - standard deviation of good Southern
+d1g = 10 - standard deviation of good Southerners
 
-m1b = 50 - average rating of bad Southern
+m1b = 50 - average rating of bad Southerners
 
-d1b = 10 - standard deviation of bad Southern
+d1b = 10 - standard deviation of bad Southerners
 
 ## Economics
 
 Fuction **threshold_1** evaluate optimal threshold for population.
 
-Аргументы:
+Arguments:
 
-demos - population data frame 
+    demos - population data frame 
 
-profit - profit from the correct issuance of a loan
+    profit - profit from the correct issuance of a loan
 
-loss - loss from improper loan disbursement
+    loss - loss from improper loan disbursement
 
-Функция **profit_base** рассчитывает прибыль, деленную на размер населения. Аргументы те же.
+Function **profit_base** calculates the profit divided by the size of the population. The arguments are the same.
 
-Функция **recip** рассчитывает долю тех, кто получает заем. Аргументы:
+Function **recip** calculates the proportion of those who receive a loan. Arguments:
 
-demos - датафрейм с населением 
+    demos - population data frame
 
-threshold - порог одобрения займа
+    threshold - loan approval threshold
 
-Функция **paritet** рассчитывает долю получивших заем для сценария демографического паритета. Для обеих групп доля должна быть одинаковая.
+Function **paritet** calculates the borrowing rate for the demographic parity scenario. For both groups, the proportion should be the same.
 
-Аргументы: demos1, demos2, i, profit=3, loss=7. Два датафрейма с населениеми прибыль с убытками.
+Arguments:
+    
+    demos1, demos2, i, profit=3, loss=7. Two data frames with two populations, profit, and loss.
 
-Функция **profit_paritet** - общая прибыль сценария паритета. Аргументы те же. 
+Function **profit_paritet** - is the total profit of the parity scenario. The arguments are the same.
 
-Функция **my_df** - создает датафрейм со статистиками для населения (аргумент - demos). Список статистик:
+Function **my_df** - creates a dataframe with statistics for the population (argument: _demos_). Stats list:
 
-Optimal_threshold_N = оптимальный порог для северных
+Optimal_threshold_N = optimal threshold for Northerners
 
-Optimal_threshold_S = оптимальный порог для южных
+Optimal_threshold_S = оptimal threshold for Southerners
 
-Optimal_prop_N_yes = доля северных с положительным решением в сценарии без ограничений
+Optimal_prop_N_yes = proportion of northerners with a positive decision in the scenario without restrictions
 
-Optimal_prop_S_yes = доля южных с положительным решением в сценарии без ограничений
+Optimal_prop_S_yes = proportion of southerners with a positive decision in the scenario without restrictions
 
-Optimal_prop_yes = доля получивших заём 1-й сценарий
+Optimal_prop_yes = proportion of borrowers in the scenario without restrictions
 
-Optimal_Profit = прибыль банка в сценарии без ограничений
+Optimal_Profit = bank profit in the scenario without restrictions
 
 Just_threshold = порог в сценарии "популяционной слепоты" (2 сценарий)
 
@@ -83,15 +85,10 @@ Just_prop_S_yes = доля южных получивших заём во 2-м с
 
 Just_prop_yes = доля получивших заём 2-й сценарий
 
-Just_Profit = profit_base(demos = demos, threshold = threshold_1(demos)),
-                     Paritet_threshold_N = quantile(dem1$credit_rate, pr/100),
-                     Paritet_threshold_S = quantile(dem2$credit_rate, pr/100),
-                     Paritet_prop_yes=(100-paritet(dem1, dem2))/100,
-                     Paritet_profit=profit_paritet(dem1, dem2),
-                     Justice_price=profit_base(dem1, threshold = threshold_1(dem1))+
-                       profit_base(dem2, threshold = threshold_1(dem2))-
-                       profit_base(demos = demos, threshold = threshold_1(demos)),
-                     Paritet_price=profit_base(dem1, threshold = threshold_1(dem1))+
-                       profit_base(dem2, threshold = threshold_1(dem2))-profit_paritet(dem1, dem2)
+Just_Profit = Прибыль во 2-м сценарии
+
+Paritet_threshold_N = Порог северных в сценарии демографического паритета
+
+
 
 
